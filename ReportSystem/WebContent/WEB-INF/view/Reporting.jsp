@@ -87,7 +87,7 @@
 		</style>
     <tr>
     <td>所在地</td>
-    <td><textarea name = "location"  class = "textarea_1 validate" placeholder="ここに入力して下さい" value="" maxlength="50"></textarea></td>
+    <td><textarea name = "location"  class = "textarea_1 validate" placeholder="ここに入力して下さい" value="" maxlength="50" required></textarea></td>
     <style>
 		.textarea_1{
 			width : 320px ;
@@ -101,7 +101,7 @@
     <tr>
     <td>エリア</td>
     <td><div class="pulldownset vegetable">
-             <select name="paper" class="mainselect">
+             <select name="paper" class="mainselect" required>
                  <option value="">エリア</option>
                  <option value="北海道地方">北海道地方</option>
                  <option value="東北地方">東北地方</option>
