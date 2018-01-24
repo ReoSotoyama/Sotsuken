@@ -42,8 +42,8 @@
 			</tr>
 			<tr>
 				<th scope="row">学科・コース</th>
-				<td>	<label<%=sb.getDepartment()%>>科</label><br>
-						<label><%=sb.getCourse()%>コース</label>
+				<td>	<label><%=sb.getDepartment()%></label><br>
+						<label><%=sb.getCourse()%></label>
 				</td>
 			</tr>
 			<tr>
@@ -70,7 +70,7 @@
 
 
     <div class="noprint">
-		<p><input class="btn1" type="submit" name="submit" value="戻る"onclick="window.close()"></p>
+		<p><input class="btn1" type="submit" name="submit" value="閉じる"onclick="window.close()"></p>
     	<input class="btn2" type="button" value="印刷する" onclick="window.print();" />
 	</div>
 

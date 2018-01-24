@@ -129,7 +129,9 @@ public class Search_Servlet extends HttpServlet{
 
 	        String view = null;
 	        if(request.getParameter("pagename").equals("return") == true){
+	        	Login_Servlet ls = new Login_Servlet();
 	        	view ="/WEB-INF/view/Menu.jsp";
+	        	request.setAttribute("userNumber", ls.id);
 
 	        }
 
@@ -138,7 +140,7 @@ public class Search_Servlet extends HttpServlet{
 	        	list = dao.find(bean);
 	        	request.setAttribute("list", list);
 	        }
-	        
+
 
 	        RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 	        dispatcher.forward(request, response);

@@ -1,5 +1,7 @@
 <!doctype html>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="bean.EmployeeBean"%>
+<% EmployeeBean sb = (EmployeeBean)request.getAttribute("section");%>
 <html>
 <head>
 <meta charset="utf-8">
@@ -9,7 +11,9 @@
 <body>
 <form action="./Report_Servlet" method="post">
 <h1><font size="64">報告書作成</font></h1>
-   <div class="day"><p>提出日<br>平成<input type="text" name="year" class="textfield_3" value="" />年<input type="text" name="mouth" class="textfield_3" value="" />月<input type="text" name="day" class="textfield_3" value="" />日</p></div>　
+   <div class="day"><p>提出日<br>平成<input type="text" name="year"maxlength="2" class="textfield_3" value=""  required/>年
+   <input type="text" name="mouth" class="textfield_3" maxlength="2"value="" required />月
+   <input type="text" name="day" class="textfield_3" maxlength="2" value=""  required/>日</p></div>　
    <style>
 	   .day{
 		   position : absolute ;
@@ -42,7 +46,7 @@
 		<td>合否</td>
 
    		<td>
-  <select name="sof" class="hantei validate">
+  <select name="sof" class="hantei validate" required>
   <option value="">選択</option>
   <option value="合">合</option>
   <option value="不">否</option>
@@ -59,7 +63,7 @@
 	</tr>
     <tr>
        <td>会社名</td>
-       <td><input type="text" name="company" class="textfield validate"  value="" /></td>
+       <td><input type="text" name="company" class="textfield validate"  value=""  required/></td>
        <style>
 
 		   input.textfield{
@@ -71,7 +75,10 @@
 
     <tr>
        <td>電話</td>
-       <td><input type="text" name="phone" class="textfield_1 validate" value="" />&nbsp;&nbsp;-<input type="text" name="phone1" class="textfield_1 validate"value="" />&nbsp;&nbsp;-<input type="text" name="phone2" class="textfield_1 validate" value="" /></td>
+       <td><input type="text" name="phone" class="textfield_1 validate" value="" maxlength="3" required pattern="^[0-9]*"/>
+       &nbsp;&nbsp;-<input type="text" name="phone1" class="textfield_1 validate"value=""  maxlength="4" required pattern="^[0-9]*"/>
+       &nbsp;&nbsp;-<input type="text" name="phone2" class="textfield_1 validate" value=""  maxlength="4" required pattern="^[0-9]*"/>
+       </td>
 
     </tr><style>
 		   .textfield_1 {
@@ -110,17 +117,17 @@
 
     <tr>
     <td> 学籍番号</td>
-    <td><label><%= request.getAttribute("userNumber") %></label></td>
+    <td><label><%=sb.getId()%></label></td>
     </tr>
 
     <tr>
     <td>氏名</td>
-    <td><input type = "text" name="name" class="textfield validate" value="" /></td>
+    <td><label><input type = "text" name="name" class="textfield validate" value="<%=sb.getName()%>"readonly="readonly" /></label></td>
     </tr>
     <tr>
     <td>学科・コース</td>
     <td><div class="pulldownset vegetable">
-			<select name="department"class="mainselect vegetable">
+			<select name="department"class="mainselect vegetable"  required>
 				<option value="">学科を選択</option>
 				<option value="情報システム科">情報システム科</option>
 				<option value="ネットワークセキュリティ科">ネットワークセキュリティ科</option>
@@ -137,34 +144,34 @@
 				<option value="スマートフォンアプリ開発コース">スマートフォンアプリ開発コース</option>
 			</select>
 
-			<select id="ネットワークセキュリティ科" class="subbox vegetable" name="course1">
+			<select id="ネットワークセキュリティ科" class="subbox vegetable" name="course">
 				<option value="ネットワークエンジニアコース">ネットワークエンジニアコース</option>
 				<option value="情報セキュリティコース">情報セキュリティコース</option>
 			</select>
 
-			<select id="総合システム工学科" class="subbox vegetable" name="course2">
+			<select id="総合システム工学科" class="subbox vegetable" name="course">
 				<option value="WEBプログラマーコース">WEBプログラマーコース</option>
 				<option value="組込みシステムコース">組込みシステムコース</option>
 				<option value="ゲームプログラマコース">ゲームプログラマコース</option>
 			</select>
-			<select id="高度情報工学科" class="subbox vegetable" name="course3">
+			<select id="高度情報工学科" class="subbox vegetable" name="course">
 				<option value="高度情報工学科">高度情報工学科</option>
 			</select>
-			<select id="情報ビジネス科" class="subbox vegetable" name="course4">
+			<select id="情報ビジネス科" class="subbox vegetable" name="course">
 				<option value="情報ビジネスコース">情報ビジネスコース</option>
 				<option value="公共ビジネスコース">公共ビジネスコース</option>
 			</select>
-			<select id="会計ビジネス科" class="subbox vegetable" name="course5">
+			<select id="会計ビジネス科" class="subbox vegetable" name="course">
 				<option value="会計ビジネスコース">会計ビジネスコース</option>
 				<option value="会計エキスパートコース">会計エキスパートコース</option>
 			</select>
-			<select id="デザイン科" class="subbox vegetable" name="course6">
+			<select id="デザイン科" class="subbox vegetable" name="course">
 				<option value="グラフィックデザインコース">グラフィックデザインコース</option>
 				<option value="CGクリエイトコース">CGクリエイトコース</option>
 				<option value="アニメ・マンガコース">アニメ・マンガコース</option>
 				<option value="建築インテリアコース">建築インテリアコース</option>
 			</select>
-			<select id="総合デザイン科" class="subbox vegetable" name="course7">
+			<select id="総合デザイン科" class="subbox vegetable" name="course">
 				<option value="総合デザインコース">総合デザインコース</option>
 			</select>
   </div>
@@ -212,7 +219,7 @@
 		</td>
     </tr>
 	<td>業種</td>
-    <td><select name="industry" class="mainselect2 vegetable">
+    <td><select name="industry" class="mainselect2 vegetable" required>
 <option value="">業種</option>
 <option value="メーカー">メーカー</option>
 <option value="商社">商社</option>
@@ -232,7 +239,7 @@
 
     <tr>
     <td>職種</td>
-    <td><select name="occupations" class="mainselect1 vegetable">
+    <td><select name="occupations" class="mainselect1 vegetable" required>
 <option value="">職種</option>
 <option value="営業・事務・企画系">営業・事務・企画系</option>
 <option value="サービス・販売系">サービス・販売系</option>
@@ -251,7 +258,7 @@
   	<tr>
   	<td>1次<br>試験<br>報告</td>
 
-   	<td><textarea name = "coment1"  class = "textarea_2 validate" placeholder="ここに入力して下さい"></textarea></td>
+   	<td><textarea name = "coment1"  class = "textarea_2 validate" placeholder="ここに入力して下さい" size=200 style="font-size:24px;" required></textarea></td>
    	</tr>
    	 <style>
 		.textarea_2{
@@ -262,12 +269,12 @@
   	<tr>
   	<td>2次<br>試験<br>報告</td>
 
-   	<td><textarea name = "coment2"  class = "textarea_2 validate" placeholder="ここに入力して下さい" value=""></textarea></td>
+   	<td><textarea name = "coment2"  class = "textarea_2 validate" placeholder="ここに入力して下さい" value="" size=200 style="font-size:24px;"></textarea></td>
    	</tr>
   	<tr>
   	<td><div class="textfield_3">3次<br>試験<br>報告</div></td>
 
-   	<td><textarea name = "coment3"  class = "textarea_2 validate" placeholder="ここに入力して下さい" value=""></textarea></td>
+   	<td><textarea name = "coment3"  class = "textarea_2 validate" placeholder="ここに入力して下さい" value="" size=200 style="font-size:24px;"></textarea></td>
      </tr>
 	   </table></div>
 	   <style>
@@ -310,7 +317,9 @@
 
     </style>
 	</p>
+</form>
 
+<form action="./Report_Servlet" method="post">
     <p><button class="button2" type="submit" value="back" name="pagename">戻る</button></p>
     <style>
 	button.button2{
@@ -327,8 +336,8 @@
 	left:10px;
    }
    </style>
-
 </form>
+
 
 
 </body>

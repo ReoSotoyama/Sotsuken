@@ -46,7 +46,9 @@ public class Completion_Servlet extends HttpServlet{
 	        view = "/WEB-INF/view/Login.jsp";
 	        }
 	        else if (request.getParameter("pagename").equals("menu") == true){
-	        	view = "/WEB-INF/view/Menu.jsp";
+	        	Login_Servlet ls = new Login_Servlet();
+	        	view ="/WEB-INF/view/Menu.jsp";
+	        	request.setAttribute("userNumber", ls.id);
 	        }
 	        RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 	        dispatcher.forward(request, response);

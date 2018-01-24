@@ -41,6 +41,7 @@
       <thead>
         <tr>
           <th class="thc1">ヘッダー番号</th>
+		  <th class="thc2" colspan="2">氏名</th>
           <th class="thc2" colspan="2">年月日</th>
           <th class="thc3" colspan="2">会社名</th>
         </tr>
@@ -50,9 +51,10 @@
 
         <tr>
 			<form name="form1" method="post" action="Result_Servlet" value = <%=member.getHeader()%>>
-          		<td  class="tdc1" ><a href="Result_Servlet?header=<%=member.getHeader()%>" target="_blank" rel="nofollow" value = ><%=member.getHeader()%></a></td>
-          		<td class="tdc2"> <%=member.getYear()%></td>
-          		<td class="tdc3"><%=member.getCompany()%> </td>
+          		<td  class="tdc1" align="center" ><a href="Result_Servlet?header=<%=member.getHeader()%>" target="_blank" rel="nofollow" value = ><%=member.getHeader()%></a></td>
+			    <td class="tdc2" align="center"><%=member.getName()%></td>
+          		<td class="tdc2" align="center"> <%=member.getYear()%></td>
+          		<td class="tdc3" align="center"><%=member.getCompany()%> </td>
 			</form>
         </tr>
 <%} %>
