@@ -106,7 +106,7 @@
 
 <form name="" id="id_form1" action="./Search_Servlet" method="post">
 
-<input  name="name" type="text"  class="form-control" placeholder="企業名入力" >
+<input  name="name" type="text"  class="form-control" maxlength="30" placeholder="企業名入力" >
 <div class="pulldownset vegetable"  align="center">
 <br>
 

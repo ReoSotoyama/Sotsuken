@@ -18,7 +18,7 @@
         トップページからログインしてください。
         </p>
 
-            <button href="#" class="sample1"name="pagename" value="login">トップページに戻る</button>
+            <button href="#" class="btn1"name="pagename" value="login">トップページに戻る</button>
 
     </div>
 </div>

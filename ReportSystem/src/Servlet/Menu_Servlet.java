@@ -8,6 +8,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import bean.EmployeeBean;
+import dao.EmployeeDao;
 @WebServlet("/Menu_Servlet")
 public class Menu_Servlet extends HttpServlet{
 	private static final long serialVersionUID = 1L;
@@ -48,16 +51,17 @@ public class Menu_Servlet extends HttpServlet{
 	        }
 
 	        else if (request.getParameter("pagename").equals("report") == true){
-	        	Login_Servlet ls = new Login_Servlet();
-	        	request.setAttribute("userNumber", ls.id);
+	        	EmployeeBean bean = null;
+		    	EmployeeDao da = new EmployeeDao();
+		    	Login_Servlet ls = new Login_Servlet();
+
+		    	bean = da.find(ls.id);
+	        	request.setAttribute("section", bean);
 	        	view = "/WEB-INF/view/Reporting.jsp";
 	        }
 
-	        else if (request.getParameter("pagename").equals("mypage") == true){
-	        	view = "/WEB-INF/view/MyPage.jsp";
-	        }
-	        else if(request.getParameter("pagename").equals("back")){
-	        	view ="/WEB-INF/view/Login.jsp";
+	        else if (request.getParameter("pagename").equals("return") == true){
+	        	view = "/WEB-INF/view/Login.jsp";
 	        }
 	        RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 	        dispatcher.forward(request, response);

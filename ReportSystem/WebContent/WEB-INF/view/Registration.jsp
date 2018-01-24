@@ -114,7 +114,7 @@
 		<input name="gakunen" type="radio" class="gakunen" value="4年" >4年
 
 		<p>
-		<b class="user">ユーザー名：
+		<b class="user">氏名：
 		<input type="text" name="user" size="20" maxlength="20" value="" required></b>
 		</p>
 
@@ -126,13 +126,13 @@
 
 
 		<p>
-		<b>メールアドレス：</b>
-		<input class="mail" type="text" name="mail" size="20" maxlength="30"value="">
+		<b class="mail1">メールアドレス：
+		<input class="mail" type="text" name="mail" size="20" maxlength="30" value="" pattern="^[0-9A-Za-z]+$">※半角英数</b>
 		</p>
 
 		<p>
 		<b class="pass1">パスワード：
-		<input type="password"  name="pass" size="20" maxlength="20"value="" required pattern="^[0-9A-Za-z]+$">※20文字以内,半角英数</b>
+		<input type="password"  name="pass" size="20" maxlength="20" value="" required pattern="^[0-9A-Za-z]+$">※20文字以内</b>
 		</p>
 
 		<p>
@@ -157,19 +157,19 @@
 
 	<style>
 		.user{
-			margin-right: 17px;
+			margin-left: 30px;
 		}
 		.gakuseki{
 			margin-left: 48px;
 		}
 		.pass1{
-			margin-left: 150px;
+			margin-left: 80px;
 		}
 		.pass2{
 			margin-right: 83px;
 		}
-		.mail{
-			margin-right: 50px;
+		.mail1{
+			margin-left: 30px;
 		}
 		.btn1{
 			background-color:#FF8300;
