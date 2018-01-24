@@ -63,7 +63,7 @@
 	</tr>
     <tr>
        <td>会社名</td>
-       <td><input type="text" name="company" class="textfield validate"  value=""  required/></td>
+       <td><input type="text" name="company" class="textfield validate"  value=""   maxlength="30" required/></td>
        <style>
 
 		   input.textfield{
@@ -87,11 +87,12 @@
 		</style>
     <tr>
     <td>所在地</td>
-    <td><textarea name = "location"  class = "textarea_1 validate" placeholder="ここに入力して下さい" value=""></textarea></td>
+    <td><textarea name = "location"  class = "textarea_1 validate" placeholder="ここに入力して下さい" value="" maxlength="30"></textarea></td>
     <style>
 		.textarea_1{
 			width : 320px ;
 			height : 50px ;
+			resize: none;
 		}
 		</style>
     </tr>
@@ -102,7 +103,6 @@
     <td><div class="pulldownset vegetable">
              <select name="paper" class="mainselect">
                  <option value="">エリア</option>
-                 <option value="">---指定しない---</option>
                  <option value="北海道地方">北海道地方</option>
                  <option value="東北地方">東北地方</option>
                  <option value="関東地方">関東地方</option>
@@ -258,23 +258,24 @@
   	<tr>
   	<td>1次<br>試験<br>報告</td>
 
-   	<td><textarea name = "coment1"  class = "textarea_2 validate" placeholder="ここに入力して下さい" size=200 style="font-size:24px;" required></textarea></td>
+   	<td><textarea name = "coment1"  class = "textarea_2 validate" placeholder="ここに入力して下さい" size=200 style="font-size:24px;" required maxlength="500"></textarea></td>
    	</tr>
    	 <style>
 		.textarea_2{
 			width : 700px ;
-			height : 800px ;
+			height : 790px ;
+			resize: none;
 		}
 		</style>
   	<tr>
   	<td>2次<br>試験<br>報告</td>
 
-   	<td><textarea name = "coment2"  class = "textarea_2 validate" placeholder="ここに入力して下さい" value="" size=200 style="font-size:24px;"></textarea></td>
+   	<td><textarea name = "coment2"  class = "textarea_2 validate" placeholder="ここに入力して下さい" value="" size=200 maxlength="500" style="font-size:24px;"></textarea></td>
    	</tr>
   	<tr>
   	<td><div class="textfield_3">3次<br>試験<br>報告</div></td>
 
-   	<td><textarea name = "coment3"  class = "textarea_2 validate" placeholder="ここに入力して下さい" value="" size=200 style="font-size:24px;"></textarea></td>
+   	<td><textarea name = "coment3"  class = "textarea_2 validate" placeholder="ここに入力して下さい" value="" size=200 maxlength="500" style="font-size:24px;"></textarea></td>
      </tr>
 	   </table></div>
 	   <style>
@@ -306,7 +307,7 @@
 	height: 40;
     cursor:pointer;
 	color:#fff;
-	font-size: 25;
+	font-size: 23px;
 	font-weight:bold;
 	padding:10px 50px;
     position: absolute;
