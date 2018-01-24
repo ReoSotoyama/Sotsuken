@@ -87,7 +87,7 @@
 		</style>
     <tr>
     <td>所在地</td>
-    <td><textarea name = "location"  class = "textarea_1 validate" placeholder="ここに入力して下さい" value="" maxlength="30"></textarea></td>
+    <td><textarea name = "location"  class = "textarea_1 validate" placeholder="ここに入力して下さい" value="" maxlength="50"></textarea></td>
     <style>
 		.textarea_1{
 			width : 320px ;
