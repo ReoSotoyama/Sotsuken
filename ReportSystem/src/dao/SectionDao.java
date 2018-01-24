@@ -207,7 +207,7 @@ public class SectionDao {
     	String str = "指定なし";
 
     	if(!str.equals(bean.getCompany())){
-    		sql = sql.concat("会社名 = ?,");
+    		sql = sql.concat("会社名 LIKE ?,");
 
     	}
     	if(!str.equals(bean.getDepartment())){
@@ -242,7 +242,7 @@ public class SectionDao {
     sql = sql.concat(";");
     System.out.println(sql);
       PreparedStatement ps = conn.prepareStatement(sql);
-      ps.setString(1, bean.getCompany());
+      ps.setString(1, "%" + bean.getCompany() + "%");
 
       ResultSet rs = ps.executeQuery();
       while (rs.next()) {

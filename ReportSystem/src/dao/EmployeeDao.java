@@ -169,13 +169,13 @@ public class EmployeeDao {
   public EmployeeBean find(int id) {
     EmployeeBean employeeBean = null;
     try (Connection conn = DbManager.getConnection()) {
-      PreparedStatement ps = conn.prepareStatement("SELECT * FROM user WHERE id = ?");
+      PreparedStatement ps = conn.prepareStatement("SELECT * FROM user WHERE 学籍番号 = ?");
       ps.setInt(1, id);
       ResultSet rs = ps.executeQuery();
       while (rs.next()) {
-        employeeBean = new EmployeeBean(rs.getInt("id"), rs.getString("name"),
-            rs.getString("department"),rs.getString("course"),
-            rs.getString("x"),rs.getString("pass"),rs.getString("address"));
+        employeeBean = new EmployeeBean(rs.getInt("学籍番号"), rs.getString("ユーザー名"),
+            rs.getString("学科"),rs.getString("コース"),
+            rs.getString("学年"),rs.getString("パスワード"),rs.getString("メールアドレス"));
       }
     } catch (SQLException e) {
       e.printStackTrace();

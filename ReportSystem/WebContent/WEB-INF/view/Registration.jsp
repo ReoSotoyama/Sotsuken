@@ -114,7 +114,7 @@
 		<input name="gakunen" type="radio" class="gakunen" value="4年" >4年
 
 		<p>
-		<b class="user">ユーザー名：
+		<b class="user">氏名：
 		<input type="text" name="user" size="20" maxlength="20" value="" required></b>
 		</p>
 
@@ -157,7 +157,7 @@
 
 	<style>
 		.user{
-			margin-right: 17px;
+			margin-left: 30px;
 		}
 		.gakuseki{
 			margin-left: 48px;
