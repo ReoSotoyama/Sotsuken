@@ -11,9 +11,9 @@
 <body>
 <form action="./Report_Servlet" method="post">
 <h1><font size="64">報告書作成</font></h1>
-   <div class="day"><p>提出日<br>平成<input type="text" name="year"maxlength="2" class="textfield_3" value=""  required/>年
-   <input type="text" name="mouth" class="textfield_3" maxlength="2"value="" required />月
-   <input type="text" name="day" class="textfield_3" maxlength="2" value=""  required/>日</p></div>　
+   <div class="day"><p>提出日<br>平成<input type="text" name="year"maxlength="2" class="textfield_3" value=""  required pattern="(0|[1-9][0-9]*)"/>年
+   <input type="text" name="mouth" class="textfield_3" maxlength="2"value="" required pattern="(0|[1-9][0-9]*)" />月
+   <input type="text" name="day" class="textfield_3" maxlength="2" value=""  required pattern="(0|[1-9][0-9]*)"/>日</p></div>　
    <style>
 	   .day{
 		   position : absolute ;
@@ -144,34 +144,34 @@
 				<option value="スマートフォンアプリ開発コース">スマートフォンアプリ開発コース</option>
 			</select>
 
-			<select id="ネットワークセキュリティ科" class="subbox vegetable" name="course">
+			<select id="ネットワークセキュリティ科" class="subbox vegetable" name="course1">
 				<option value="ネットワークエンジニアコース">ネットワークエンジニアコース</option>
 				<option value="情報セキュリティコース">情報セキュリティコース</option>
 			</select>
 
-			<select id="総合システム工学科" class="subbox vegetable" name="course">
+			<select id="総合システム工学科" class="subbox vegetable" name="course2">
 				<option value="WEBプログラマーコース">WEBプログラマーコース</option>
 				<option value="組込みシステムコース">組込みシステムコース</option>
 				<option value="ゲームプログラマコース">ゲームプログラマコース</option>
 			</select>
-			<select id="高度情報工学科" class="subbox vegetable" name="course">
+			<select id="高度情報工学科" class="subbox vegetable" name="course3">
 				<option value="高度情報工学科">高度情報工学科</option>
 			</select>
-			<select id="情報ビジネス科" class="subbox vegetable" name="course">
+			<select id="情報ビジネス科" class="subbox vegetable" name="course4">
 				<option value="情報ビジネスコース">情報ビジネスコース</option>
 				<option value="公共ビジネスコース">公共ビジネスコース</option>
 			</select>
-			<select id="会計ビジネス科" class="subbox vegetable" name="course">
+			<select id="会計ビジネス科" class="subbox vegetable" name="course5">
 				<option value="会計ビジネスコース">会計ビジネスコース</option>
 				<option value="会計エキスパートコース">会計エキスパートコース</option>
 			</select>
-			<select id="デザイン科" class="subbox vegetable" name="course">
+			<select id="デザイン科" class="subbox vegetable" name="course6">
 				<option value="グラフィックデザインコース">グラフィックデザインコース</option>
 				<option value="CGクリエイトコース">CGクリエイトコース</option>
 				<option value="アニメ・マンガコース">アニメ・マンガコース</option>
 				<option value="建築インテリアコース">建築インテリアコース</option>
 			</select>
-			<select id="総合デザイン科" class="subbox vegetable" name="course">
+			<select id="総合デザイン科" class="subbox vegetable" name="course7">
 				<option value="総合デザインコース">総合デザインコース</option>
 			</select>
   </div>

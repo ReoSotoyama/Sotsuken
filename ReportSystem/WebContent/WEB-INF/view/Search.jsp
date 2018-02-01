@@ -288,10 +288,12 @@ document.addEventListener('DOMContentLoaded', function() {
 	<p>
 		<button type="submit"  class="search" value="search" name="pagename">検索</button>
 	</p>
+
 		<div>
 			<button class="return" type="submit"  value="return" name="pagename">戻る</button>
 		</div>
 </form>
+
 
 
 </body>
