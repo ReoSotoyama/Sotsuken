@@ -62,28 +62,28 @@ public class Registration_Servlet extends HttpServlet{
 		        switch(request.getParameter("department")){
 
 		        case "情報システム科":
-		        	bean.setCourse(request.getParameter("course"));
-		        	break;
-		        case "ネットワークセキュリティ科":
 		        	bean.setCourse(request.getParameter("course1"));
 		        	break;
-		        case "総合システム工学科":
+		        case "ネットワークセキュリティ科":
 		        	bean.setCourse(request.getParameter("course2"));
 		        	break;
-		        case "高度情報工学科":
+		        case "総合システム工学科":
 		        	bean.setCourse(request.getParameter("course3"));
 		        	break;
-		        case "情報ビジネス科":
+		        case "高度情報工学科":
 		        	bean.setCourse(request.getParameter("course4"));
 		        	break;
-		        case "会計ビジネス科":
+		        case "情報ビジネス科":
 		        	bean.setCourse(request.getParameter("course5"));
 		        	break;
-		        case "デザイン科":
+		        case "会計ビジネス科":
 		        	bean.setCourse(request.getParameter("course6"));
 		        	break;
-		        case "総合デザイン科":
+		        case "デザイン科":
 		        	bean.setCourse(request.getParameter("course7"));
+		        	break;
+		        case "総合デザイン科":
+		        	bean.setCourse(request.getParameter("course8"));
 		        	break;
 		        }
 

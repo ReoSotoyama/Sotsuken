@@ -57,7 +57,7 @@ public class Result_Servlet extends HttpServlet{
 
 
 	        String view = null;
-	        if(request.getParameter("pagename").equals("back")){
+	        if(request.getParameter("pagename").equals("return")){
 	        	view ="/WEB-INF/view/Menu.jsp";
 	        }
 

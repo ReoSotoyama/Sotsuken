@@ -127,7 +127,7 @@
 
 		<p>
 		<b class="mail1">メールアドレス：
-		<input class="mail" type="text" name="mail" size="20" maxlength="30" value="" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">※半角英数</b>
+		<input class="mail" type="text" name="mail" size="20" maxlength="50" value="" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">※半角英数</b>
 		</p>
 
 		<p>
